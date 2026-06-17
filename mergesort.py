@@ -42,7 +42,8 @@ def merge_sort(values: list[int]) -> None:
 def plot_values(values: list[int]) -> None:
     """Display the values as a line plot."""
     positions = range(len(values))
-    plt.plot(positions, values)
+    fig, ax = plt.subplots(figsize=(8, 4))
+    ax.bar(positions, values)
     plt.show()
 
 
